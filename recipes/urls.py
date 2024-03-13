@@ -8,5 +8,6 @@ app_name = 'recipes'
 # que devemos receber como parametro: str, slug, int
 urlpatterns = [
     path('', views.home, name="home"),
+    path('recipes/category/<int:category_id>/', views.recipe, name="category"),
     path('recipes/<int:id>/', views.recipe, name="recipe"),
 ]
