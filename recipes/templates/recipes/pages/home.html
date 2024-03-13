@@ -4,14 +4,9 @@
 
 {% block content %}
 <div class="main-content main-content-list container">
-    {% include 'recipes/partials/recipe.html' %}
-    {% include 'recipes/partials/recipe.html' %}
-    {% include 'recipes/partials/recipe.html' %}
-    {% include 'recipes/partials/recipe.html' %}
-    {% include 'recipes/partials/recipe.html' %}
-    {% include 'recipes/partials/recipe.html' %}
-    {% include 'recipes/partials/recipe.html' %}
-    {% include 'recipes/partials/recipe.html' %}
-    {% include 'recipes/partials/recipe.html' %}
+    {% for recipe in recipes %}
+        <!--Variavel recipe pai é extedido para todos os html dentro do laço-->
+        {% include 'recipes/partials/recipe.html' %}
+    {% endfor %}
 </div>
 {% endblock content %}
